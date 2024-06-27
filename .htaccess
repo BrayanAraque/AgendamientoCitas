@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirigir todo el tráfico a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Manejar archivos estáticos
+RewriteRule ^public/ - [L]
